@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-OHStaleAccount</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>OHStaleAccount</command:noun>
+      <maml:description>
+        <maml:para>Displays user or computer accounts that have not logged into AD in x number of days.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Displays user or computer accounts from specified OU's that have not logged in to Active Directory in X amount of days.  The default the search is recursive, meaning the specified OU and all child OU's will be searched too, unless you add the switch -DoNotSearchRecursively</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-OHStaleAccount</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>OU</maml:name>
+          <maml:Description>
+            <maml:para>This is the FQDN of the OU that you wish to search in for stale accounts.  By default, the search is recursive meaning child OU's are also searched.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>DaysInactive</maml:name>
+          <maml:Description>
+            <maml:para>This is the number of days that the account has not logged in for.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+          <dev:type>
+            <maml:name>Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>30</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+          <maml:name>Object</maml:name>
+          <maml:Description>
+            <maml:para>Specify if you wish to search for just computer accounts, just user accounts or both computer and user accounts.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>User</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+          <maml:name>Scope</maml:name>
+          <maml:Description>
+            <maml:para>Specify if you wish to search for just accounts that are enabled, disabled or both enabled and disabled.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>Enabled</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>DoNotSearchRecursively</maml:name>
+          <maml:Description>
+            <maml:para>By including this switch, the search for stale accounts is explicitly contained to the OU defined by the OU parameter and will not search Child-OU's.</maml:para>
+          </maml:Description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>OU</maml:name>
+        <maml:Description>
+          <maml:para>This is the FQDN of the OU that you wish to search in for stale accounts.  By default, the search is recursive meaning child OU's are also searched.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>DaysInactive</maml:name>
+        <maml:Description>
+          <maml:para>This is the number of days that the account has not logged in for.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>30</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+        <maml:name>Object</maml:name>
+        <maml:Description>
+          <maml:para>Specify if you wish to search for just computer accounts, just user accounts or both computer and user accounts.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>User</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+        <maml:name>Scope</maml:name>
+        <maml:Description>
+          <maml:para>Specify if you wish to search for just accounts that are enabled, disabled or both enabled and disabled.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Enabled</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>DoNotSearchRecursively</maml:name>
+        <maml:Description>
+          <maml:para>By including this switch, the search for stale accounts is explicitly contained to the OU defined by the OU parameter and will not search Child-OU's.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>Created By: OH        Web: https://www.fearthepanda.com    Twitter: @ozthe2</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>Get-OHStaleAccount -OU 'ou=MyChildOU,ou=myOU,dc=MyCompany,dc=com' -DaysInactive 60 -Object User -Scope Enabled</dev:code>
+        <dev:remarks>
+          <maml:para>This example displays all user objects that have not logged in to AD in 60 days or more from the date you run the command. (Searching recursively in the OU specified.)</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+        <dev:code>Get-OHStaleAccount  -DaysInactive 45 -OU 'ou=myOU,dc=MyCompany,dc=com' -Object Computer | ? {$_.name -like "*LAP*"}</dev:code>
+        <dev:remarks>
+          <maml:para>This example searches for all computer objects that have not logged in to AD in 45 days or more from the date you run the command, searching in the OU specified, (Including Child-OUs), and only displays computers whose computer name contains the word 'LAP' in it.  Eg the computer is named MyLaptop or LAP001</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+        <dev:code>(Get-OHStaleAccount -DaysInactive 60 -OU 'ou=MyChildOU,ou=myOU,dc=MyCompany,dc=com').samAccountName | Disable-ADAccount</dev:code>
+        <dev:remarks>
+          <maml:para>This command displays all user accounts that have not logged in to AD in 60 days or more from the date you run the command, searching in the OU specified, (Including Child-OUs), and then disables the accounts.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 4 --------------------------</maml:title>
+        <dev:code>Get-OHStaleAccount -DaysInactive 60 -OU 'ou=MyChildOU,ou=myOU,dc=MyCompany,dc=com' -DoNotSearchRecursively</dev:code>
+        <dev:remarks>
+          <maml:para>This example displays all user accounts that have not logged in to AD for 60 days or more from the date you run the command, searching only in the OU specified. (Child-OU's will not be searched)</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+</helpItems>

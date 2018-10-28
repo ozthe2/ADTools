@@ -1,0 +1,11 @@
+PSTOPIC
+    about_adtools
+
+SHORT DESCRIPTION
+    ADTools is a module that willl contain various functions to help you manage your AD environment.
+
+LONG DESCRIPTION
+    Tired of people kicking sand in your face?  Then you need ADTools! The ever expanding toolset to help you manage your AD environment. (OK - I admit it's a little lacking at the moment, nut bear with me - I have lots to add!)
+
+DETAILED DESCRIPTION
+    This is an ongoing module that will have various super-cool and uber tools that will make your life as an IT admin that little bit more bearable.
