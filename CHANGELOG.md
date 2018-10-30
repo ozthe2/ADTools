@@ -1,5 +1,10 @@
-###Change Log
+### Unreleased
+- Ping range tool - a tool to ping a pre-defined range with DNS resolution for responses. (where possible)
+- Find empty groups in AD
+- Poor man's audit - An audit tool that can be scheduled to report any servers or services that should be but are not up.
 
+
+### Change Log
 
 Date       | Version | Change
 ---        | ---     | ---
