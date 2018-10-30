@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add pester tests
 - Link project to AppVeyor
 
-## [0.1.0] - 2018-10-27
+## [0.1.0] - 2018-10-30
 
 ### Added
 - Added this changelog
