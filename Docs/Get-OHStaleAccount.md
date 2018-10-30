@@ -1,7 +1,7 @@
 ---
 external help file: ADTools-help.xml
-Module Name: ADTools
-online version: 1.0.0
+Module Name: adtools
+online version: 0.1.0
 schema: 2.0.0
 ---
 
@@ -19,7 +19,7 @@ Get-OHStaleAccount [-OU] <String> [[-DaysInactive] <Int32>] [[-Object] <String>]
 
 ## DESCRIPTION
 Displays user or computer accounts from specified OU's that have not logged in to Active Directory in X amount of days. 
-The default the search is recursive, meaning the specified OU and all child OU's will be searched too, unless you add the switch -DoNotSearchRecursively
+By default the search is recursive, meaning the specified OU and all child OU's will be searched too, unless you add the switch -DoNotSearchRecursively
 
 ## EXAMPLES
 

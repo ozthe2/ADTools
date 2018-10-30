@@ -12,7 +12,7 @@
 RootModule = 'ADTools.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.0.7'
+ModuleVersion = '0.1.0'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -107,7 +107,7 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        # ReleaseNotes = ''
+        ReleaseNotes = 'https://github.com/ozthe2/ADTools/blob/master/CHANGELOG.md'
 
     } # End of PSData hashtable
 

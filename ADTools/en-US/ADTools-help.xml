@@ -10,7 +10,7 @@
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Displays user or computer accounts from specified OU's that have not logged in to Active Directory in X amount of days.  The default the search is recursive, meaning the specified OU and all child OU's will be searched too, unless you add the switch -DoNotSearchRecursively</maml:para>
+      <maml:para>Displays user or computer accounts from specified OU's that have not logged in to Active Directory in X amount of days.  By default the search is recursive, meaning the specified OU and all child OU's will be searched too, unless you add the switch -DoNotSearchRecursively</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
