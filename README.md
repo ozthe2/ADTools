@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/6kt3iyjhgr7txdx0?svg=true)](https://ci.appveyor.com/project/ozthe2/adtools)
+
 # README
 This module, ADTools, will contain all of the helpful tools that make my life (and yours) easier.
 
