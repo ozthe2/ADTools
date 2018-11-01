@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add pester tests
 
+## [1.0.0] - 2018-11-01
+
+### Fixed
+- DoNotSearchRecursively switch was not working.
+
 ## [0.1.0] - 2018-10-30
 
 ### Added

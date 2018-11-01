@@ -58,17 +58,17 @@ function Get-OHStaleAccount{
             switch ($object) {
                 'User' {
                     switch ($scope) {
-                         'Enabled' {$Result = Get-ADUser -Filter {LastLogonDate -lt $time -and Enabled -eq $true} -SearchBase $ou -SearchScope Base -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate}
-                        'Disabled' {$Result = Get-ADUser -Filter {LastLogonDate -lt $time -and Enabled -eq $false} -SearchBase $ou -SearchScope Base -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate}
-                            'Both' {$Result = Get-ADUser -Filter {LastLogonDate -lt $time} -SearchBase $ou -SearchScope Base -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate}
+                         'Enabled' {$Result = Get-ADUser -Filter {LastLogonDate -lt $time -and Enabled -eq $true} -SearchBase $ou -Searchscope OneLevel -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate}
+                        'Disabled' {$Result = Get-ADUser -Filter {LastLogonDate -lt $time -and Enabled -eq $false} -SearchBase $ou -SearchScope OneLevel -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate}
+                            'Both' {$Result = Get-ADUser -Filter {LastLogonDate -lt $time} -SearchBase $ou -SearchScope OneLevel -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate}
                     }
                 }
             
                 'Computer' {
                     switch ($scope) {
-                         'Enabled' {$Result = Get-ADComputer -Filter {LastLogonDate -lt $time -and Enabled -eq $true} -SearchBase $ou -SearchScope Base -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate,operatingsystem}
-                        'Disabled' {$Result = Get-ADComputer -Filter {LastLogonDate -lt $time -and Enabled -eq $false} -SearchBase $ou -SearchScope Base -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate,operatingsystem}
-                            'Both' {$Result = Get-ADComputer -Filter {LastLogonDate -lt $time} -SearchBase $ou -SearchScope Base -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate,operatingsystem}
+                         'Enabled' {$Result = Get-ADComputer -Filter {LastLogonDate -lt $time -and Enabled -eq $true} -SearchBase $ou -SearchScope OneLevel -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate,operatingsystem}
+                        'Disabled' {$Result = Get-ADComputer -Filter {LastLogonDate -lt $time -and Enabled -eq $false} -SearchBase $ou -SearchScope OneLevel -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate,operatingsystem}
+                            'Both' {$Result = Get-ADComputer -Filter {LastLogonDate -lt $time} -SearchBase $ou -SearchScope OneLevel -ResultPageSize 2000 -ResultSetSize $null -Properties Name , OperatingSystem, SamAccountName, DistinguishedName,lastlogondate,operatingsystem}
                     }
                 }
             }
