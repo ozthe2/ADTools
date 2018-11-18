@@ -51,6 +51,10 @@ function Get-OHStaleAccount{
     )
 
     begin {
+        if (!(Get-Module -ListAvailable -Name ActiveDirectory)) {
+            throw "Module: ActiveDirectory not found.  Please ensure that the ActiveDirectory module is installed on this system."
+        }
+
         $time = (Get-Date).Adddays(-($DaysInactive))
     }
 
