@@ -12,5 +12,3 @@
     }
 
 Export-ModuleMember -Function $Public.Basename
-
-#Requires -Modules ActiveDirectory 
